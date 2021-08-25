@@ -1,19 +1,36 @@
 {
-  "place":{
-  "location": {
-    "lat": -38.383494,
-    "lng": 33.427362
-  },
-  "accuracy": 50,
-  "name": "Frontline house",
-  "phone_number": "(+91) 983 893 3937",
-  "address": "29, side layout, cohen 09",
-  "types": [
-    "shoe park",
-    "shop"
-  ],
-  "website": "http://google.com",
-  "language": "French-IN"
-}
-  
+  "persons": [
+    {
+      "first_name": "John",
+      "last_name": "Sharma",
+      "age": 27,
+      "id": 2,
+      "address": "New York",
+      "phonenumbers": "123456"
+    },
+    {
+      "first_name": "sumit",
+      "last_name": "srivastava",
+      "age": 34,
+      "id": 3,
+      "address": "201 house no",
+      "phonenumbers": "9978678"
+    },
+    {
+      "first_name": "Rahul",
+      "last_name": "bhardaj",
+      "age": 35,
+      "id": 1,
+      "address": "201 house no",
+      "phonenumbers": "9978678"
+    },
+    {
+      "first_name": "shwetabh",
+      "last_name": "srivastava",
+      "age": 35,
+      "id": 4,
+      "address": "201 house no",
+      "phonenumbers": "9978678"
+    }
+  ]
 }

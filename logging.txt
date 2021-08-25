@@ -1,0 +1,117 @@
+Request method:	POST
+Request URI:	http://localhost:3000/persons
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "first_name": "shwetabh",
+    "last_name": "srivastava",
+    "age": 35,
+    "id": 4,
+    "address": "201 house no",
+    "phonenumbers": "9978678"
+}
+HTTP/1.1 201 Created
+X-Powered-By: Express
+Vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+Access-Control-Expose-Headers: Location
+Location: http://localhost:3000/persons/4
+X-Content-Type-Options: nosniff
+Content-Type: application/json; charset=utf-8
+Content-Length: 141
+ETag: W/"8d-vsDkv5ReY+Hx+mADiHIC+YzRKSs"
+Date: Tue, 24 Aug 2021 13:37:43 GMT
+Connection: keep-alive
+
+{
+    "first_name": "shwetabh",
+    "last_name": "srivastava",
+    "age": 35,
+    "id": 4,
+    "address": "201 house no",
+    "phonenumbers": "9978678"
+}
+Request method:	POST
+Request URI:	http://localhost:3000/persons
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "first_name": "ocean",
+    "last_name": "srivastava",
+    "age": 35,
+    "id": 5,
+    "address": "201 house no",
+    "phonenumbers": "9978678"
+}
+HTTP/1.1 201 Created
+X-Powered-By: Express
+Vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+Access-Control-Expose-Headers: Location
+Location: http://localhost:3000/persons/5
+X-Content-Type-Options: nosniff
+Content-Type: application/json; charset=utf-8
+Content-Length: 138
+ETag: W/"8a-kdKmauVGeC2NYOY9HFl6jV80LKA"
+Date: Tue, 24 Aug 2021 13:37:43 GMT
+Connection: keep-alive
+
+{
+    "first_name": "ocean",
+    "last_name": "srivastava",
+    "age": 35,
+    "id": 5,
+    "address": "201 house no",
+    "phonenumbers": "9978678"
+}
+Request method:	DELETE
+Request URI:	http://localhost:3000/persons/5
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	id=5
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Vary: Origin, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+X-Content-Type-Options: nosniff
+Content-Type: application/json; charset=utf-8
+Content-Length: 2
+ETag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
+Date: Tue, 24 Aug 2021 13:37:43 GMT
+Connection: keep-alive
+
+{
+    
+}

@@ -1,0 +1,309 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-08-24T13:37:41.656Z",
+        "line": 21,
+        "name": "Verify if Person is being Successfully added using AddPersonAPI",
+        "description": "",
+        "id": "validating-place-api-s;verify-if-person-is-being-successfully-added-using-addpersonapi;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 849757700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Add Person Payload with \"shwetabh\" \"srivastava\" \"4\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"shwetabh\"",
+                  "offset": 24
+                },
+                {
+                  "val": "\"srivastava\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"4\"",
+                  "offset": 48
+                }
+              ],
+              "location": "StepDefinition.add_Person_Payload_with(String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 789596800,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user calls \"AddPersonAPI\" with Post http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddPersonAPI\"",
+                  "offset": 11
+                }
+              ],
+              "location": "StepDefinition.user_calls_with_Post_http_request(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2926100,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the API Call got success with status code 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 42
+                }
+              ],
+              "location": "StepDefinition.the_API_Call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 358300,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "StepDefinition.in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-24T13:37:43.337Z",
+        "line": 22,
+        "name": "Verify if Person is being Successfully added using AddPersonAPI",
+        "description": "",
+        "id": "validating-place-api-s;verify-if-person-is-being-successfully-added-using-addpersonapi;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7389400,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Add Person Payload with \"ocean\" \"srivastava\" \"5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ocean\"",
+                  "offset": 24
+                },
+                {
+                  "val": "\"srivastava\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"5\"",
+                  "offset": 45
+                }
+              ],
+              "location": "StepDefinition.add_Person_Payload_with(String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 51336600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user calls \"AddPersonAPI\" with Post http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddPersonAPI\"",
+                  "offset": 11
+                }
+              ],
+              "location": "StepDefinition.user_calls_with_Post_http_request(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2140900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the API Call got success with status code 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 42
+                }
+              ],
+              "location": "StepDefinition.the_API_Call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 595700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "StepDefinition.in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-24T13:37:43.403Z",
+        "line": 25,
+        "name": "Verify if Person is being Successfully deleted using DeletePersonAPI",
+        "description": "",
+        "id": "validating-place-api-s;verify-if-person-is-being-successfully-deleted-using-deletepersonapi",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9863400,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "Delete Person \"5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"5\"",
+                  "offset": 14
+                }
+              ],
+              "location": "StepDefinition.delete_Person(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 72153300,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user calls \"DeletePersonAPI\" with Delete http request for ID \"5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DeletePersonAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"5\"",
+                  "offset": 61
+                }
+              ],
+              "location": "StepDefinition.user_calls_with_Delete_http_request_for_ID(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1362000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the API Call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "StepDefinition.the_API_Call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 685100,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "StepDefinition.in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "Validating Place API\u0027s",
+    "description": "",
+    "id": "validating-place-api-s",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/placeValidatures.feature",
+    "tags": []
+  }
+]

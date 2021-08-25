@@ -48,16 +48,16 @@ public class TestDataBuild {
 
 	}
 
-	public Person addPersonPayLoad() {
+	public Person addPersonPayLoad(String fname,String lname ,String id) {
 
 		Person person = new Person();
 	
-		person.setFirstName("sumit");
-		person.setLastName("srivastava");
+		person.setFirstName(fname);
+		person.setLastName(lname);
 
-		person.setAge(34);
+		person.setAge(35);
 		
-		person.setId(5);
+		person.setId(Integer.parseInt(id));
 		person.setAddress("201 house no");
 		person.setPhonenumbers("9978678");
 

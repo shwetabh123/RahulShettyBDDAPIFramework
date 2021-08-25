@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="1.830885">
+<testcase classname="Validating Place API's" name="Verify if Person is being Successfully added using AddPersonAPI" time="1.677709">
+<system-out><![CDATA[Given Add Person Payload with "shwetabh" "srivastava" "4"...................passed
+When user calls "AddPersonAPI" with Post http request.......................passed
+Then the API Call got success with status code 201..........................passed
+And "status" in response body is "OK".......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validating Place API's" name="Verify if Person is being Successfully added using AddPersonAPI 2" time="0.065766">
+<system-out><![CDATA[Given Add Person Payload with "ocean" "srivastava" "5"......................passed
+When user calls "AddPersonAPI" with Post http request.......................passed
+Then the API Call got success with status code 201..........................passed
+And "status" in response body is "OK".......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validating Place API's" name="Verify if Person is being Successfully deleted using DeletePersonAPI" time="0.08741">
+<system-out><![CDATA[Given Delete Person "5".....................................................passed
+When user calls "DeletePersonAPI" with Delete http request for ID "5".......passed
+Then the API Call got success with status code 200..........................passed
+And "status" in response body is "OK".......................................passed
+]]></system-out>
+</testcase>
+</testsuite>

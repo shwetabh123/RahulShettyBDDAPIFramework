@@ -18,11 +18,16 @@ import resources.Utils;
 
 import static org.hamcrest.Matchers.*;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.*;
+import static org.testng.Assert.assertTrue;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.http.HttpStatus;
+
 
 import static io.restassured.RestAssured.*;
 
@@ -35,9 +40,9 @@ public class StepDefinition extends Utils {
 	TestDataBuild data = new TestDataBuild();
 
 	@Given("Add Place Payload")
-	public void add_Place_Payload() throws FileNotFoundException {
+	public void add_Place_Payload() throws IOException {
 
-		resspec = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
+		resspec = new ResponseSpecBuilder().expectStatusCode(201).expectContentType(ContentType.JSON).build();
 
 		res = given().spec(requestSpecification())
 
@@ -45,32 +50,70 @@ public class StepDefinition extends Utils {
 
 	}
 
-	@Given("Add Person Payload")
-	public void add_Person_Payload() throws FileNotFoundException {
-
-		resspec = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
+	@Given("Add Person Payload with {string} {string} {string}")
+	public void add_Person_Payload_with(String fname, String lname, String id) throws IOException {
+		
+		
+		resspec = new ResponseSpecBuilder().expectStatusCode(201).expectContentType(ContentType.JSON).build();
 
 		res = given().spec(requestSpecification())
 
-				.body(data.addPersonPayLoad());
-
+				.body(data.addPersonPayLoad(fname,lname,id));
 	}
 
+
+	
+	
 	@When("user calls {string} with Post http request")
 	public void user_calls_with_Post_http_request(String string) throws FileNotFoundException {
 
-		// response =requestSpecification().when().post("/maps/api/place/add/json")
+				// response =res.when().post("/maps/api/place/add/json")
 
-		response = requestSpecification().when().post("/place")
+				//response = res.when().post("/place")
+		
+				response = res.when().post("/persons")
 
 				.then().spec(resspec).extract().response();
+		
 
 	}
+	
+	
+
+	
+
+@Given("Delete Person {string}")
+public void delete_Person(String id) throws IOException {
+	
+	resspec = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
+
+	res = given().spec(requestSpecification()).pathParam("id",id);
+}
+	
+	
+
+
+
+@When("user calls {string} with Delete http request for ID {string}")
+public void user_calls_with_Delete_http_request_for_ID(String string, String id) {
+
+	response = res.when().delete("/persons/{id}")
+
+			.then().spec(resspec).extract().response();
+}
+
+
 
 	@Then("the API Call got success with status code {int}")
-	public void the_API_Call_got_success_with_status_code(Integer int1) {
+	public void the_API_Call_got_success_with_status_code(int statuscode) {
 
-		assertEquals(response.getStatusCode(), 200);
+		
+		 System.out.println("status code is:" +response.getStatusCode());
+
+		 assertEquals(response.getStatusCode(),statuscode);
+		 
+		 String responsestring=response.asString();
+		 System.out.println("response body is :-"+responsestring);
 
 		
 		/*
@@ -95,5 +138,8 @@ public class StepDefinition extends Utils {
 //	assertEquals(js.get(key).toString(),value);
 
 	}
+	
+	
+
 
 }
