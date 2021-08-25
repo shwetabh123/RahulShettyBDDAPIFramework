@@ -29,12 +29,10 @@ Feature: Validating Place API's
     When user calls "GetSinglePersonAPI" with "GET" http request
     Then the "GetSinglePersonAPI" Call got success with status code "200"
     And "status" in response body is "OK"
-   
-   
-    Examples:
+        Examples:
     |id|
-    |3 |
-     
+    |4 |
+    |5 |
     
     
    @DeletePerson  @Smoke 
@@ -45,5 +43,6 @@ Feature: Validating Place API's
     And "status" in response body is "OK"
       Examples:
     |id|
+    |4 |
     |5 |
-        
+    
